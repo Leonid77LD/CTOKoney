@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+
+Отзывы
+
+{%endblock%}
+
+
+{% block body%}
+{{super()}}
+<h4 class="h">Что про нас думают клиенты:</h4>
+
+<div class="body">
+    {% for t in rev%}
+    <div>
+    <p>{{t.name}}</p>
+    <p>Макра авто: {{t.carbrand}}</p>
+    <p>Сообщение: {{t.revi}}</p>
+    <p>{{t.time}}</p>
+    </div>
+    {%endfor%}
+
+</div>
+
+
+{% endblock %}

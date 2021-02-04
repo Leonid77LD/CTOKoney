@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}
+Услуги
+{%endblock%}
+
+{% block body%}
+{{super()}}
+<h3 class="h">Что мы можем предложить для вас:</h3>
+
+<div class="body">
+    {% for t in post%}
+    <div>
+    <p><a href="{{ url_for('showServices', alias=t.url)}}">{{t.title}}</a></p>
+    <p>{{t.text[:80] | striptags}}</p>
+    </div>
+    {%endfor%}
+
+</div>
+
+
+
+
+{% endblock %}

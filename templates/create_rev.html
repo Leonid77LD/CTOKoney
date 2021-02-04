@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}
+
+Создание отзыва
+
+{%endblock%}
+{% block body%}
+
+<h5 class="h">Здесь вы можете оставить отзыв о нашей работе!</h5>
+
+{{ super() }}
+<div class="body">
+
+<form action="{{url_for('create_rev')}}" method="POST" >
+    <p><label>Имя: </label><input type="text" name="name" value="" required ></p>
+    <p><label>Марка авто: </label><input type="text" name="carbrand" value="" required></p>
+    <p><label>Сообщение: </label></p>
+    <p><textarea name="revi" cols="40" rows="10"></textarea></p>
+    <p><input type="submit" value="Добавить"></p>
+</form>
+</div>
+{% endblock %}
+

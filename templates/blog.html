@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}
+Блог
+{%endblock%}
+
+{% block body%}
+{{super()}}
+<h2 class="h">Мы учавствуем в интересных проектах, вы можете на них взглянуть: </h2>
+
+<div class="body">
+    {% for t in post%}
+    <div>
+    <p><a href="{{ url_for('showPost', alias=t.url)}}">{{t.title}}</a></p>
+    <p>{{t.text[:80] | striptags }}</p>
+    </div>
+    {%endfor%}
+
+</div>
+
+
+{% endblock %}

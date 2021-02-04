@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS rev (
+id integer PRIMARY KEY AUTOINCREMENT,
+name text NOT NULL,
+reviews text NOT NULL
+)

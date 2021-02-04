@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}
+Блог
+{%endblock%}
+
+{% block body%}
+{{super()}}
+
+
+<div class="body">
+  {{post | safe }}
+  <p><a href="/blog">Обратно в Блог</a></p>
+</div>
+
+
+{% endblock %}

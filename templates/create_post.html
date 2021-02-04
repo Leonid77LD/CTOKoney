@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}
+
+Создание отзыва
+
+{%endblock%}
+{% block body%}
+
+<div>
+    <p>Создание постов</p>
+</div>
+
+{{ super() }}
+<div class="body">
+<form action="{{url_for('create_post')}}" method="POST" >
+    <p><label>Название: </label><input type="text" name="title" value="" required ></p>
+    <p><label>url: </label></p>
+    <p><textarea name="url" cols="40" rows="1"></textarea></p>
+    <p><label>Описане: </label></p>
+    <p><textarea name="text" cols="90" rows="20"></textarea></p>
+    <p><input type="submit" value="Добавить"></p>
+</form>
+</div>
+{% endblock %}
+
