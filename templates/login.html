@@ -7,6 +7,11 @@
 
 
 {% block body%}
+<form action="/u_log" method="post">
+    <p> <label>login:</label><input type="text" name="name" value="" required /> </p>
+    <p> <label>Password:</label><input type="password" name="psw" value="" required /> </p>
+    <p><input type="submit" value="Войти"/></p>
+</form>
 
-
+<p><a href="/Admin_menu">Меню Администратора</a></p>
 {% endblock %}

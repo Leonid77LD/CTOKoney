@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+
+Тесты
+{%endblock%}
+
+{% block body%}
+<p><a href="/home">Вернуться на Главную</a></p>
+<p><a href="/create_post">Создание постов</a></p>
+<p><a href="/u_log">Вход в систему</a></p>
+<p><a href="/test">Странице тестов</a></p>
+
+<a href="{{url_for('logout')}}">Выйти из профиля</a>
+
+{% endblock %}
